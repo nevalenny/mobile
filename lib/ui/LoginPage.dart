@@ -8,14 +8,19 @@ class LoginPage extends StatefulWidget {
 class LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
-    return new Center(
-        child: new Text(
-      'I can see you, from another place!',
-      textDirection: TextDirection.ltr,
-      style: new TextStyle(
-          fontWeight: FontWeight.bold,
-          fontStyle: FontStyle.italic,
-          color: Colors.yellow),
-    ));
+    return new Container(
+      alignment: Alignment.centerLeft,
+      child: new Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          new Text('username', textDirection: TextDirection.ltr,),
+          new Text('password', textDirection: TextDirection.ltr,),
+          new RaisedButton(
+            child: new Text('sign-in', textDirection: TextDirection.ltr),
+            onPressed: () => {},
+          ),
+        ],
+      ),
+    );
   }
 }
